@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets
+    xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+         author="Idrissa Djepa"
+         shortdescription="Comprehensive presets for MTB trails"
+         description="Fully detailed descriptions for all tags suitable for singletracks, no more need to open the OSM wiki pages next to JOSM"
+         link="https://wiki.openstreetmap.org/wiki/Mountain_biking"
+         version="[[revision]]_[[date]]">
+    <item name="MTB Singletrack" icon="presets/shop/bicycle.svg" type="way">
+        <link href="https://wiki.openstreetmap.org/wiki/Mountain_biking"
+          fr.href="https://wiki.openstreetmap.org/wiki/FR:Mountain_biking"
+          de.href="https://wiki.openstreetmap.org/wiki/DE:Mountain_biking"
+          it.href="https://wiki.openstreetmap.org/wiki/IT:Mountain_biking"
+          es.href="https://wiki.openstreetmap.org/wiki/ES:Mountain_biking"
+          nl.href="https://wiki.openstreetmap.org/wiki/NL:Mountain_biking" />
+        <label text="Edit singletracks for MTB use. Intended for 'natural' trails, not so much for bikeparks or north shore trails, even if partly suitable." />
+        <label text="highway=path is mandatory, any other value will be overwritten" />
+        <key key="highway" value="path" />
+        <space />
+        <label text="Difficulty grading for mtb use" />
+        <combo key="mtb:scale" text="Based on the scale Singletrail-skala (wiki.openstreetmap.org/wiki/Key:mtb_scale)" values_searchable="true" values_sort="false">
+            <list_entry value="0" display_value="S0 - Gravel or packed earth" short_description="Mostly forest and meadow paths. Sections with steps, rocks, or roots are not expected. Wide curves, easy to moderate slope. No special skills are needed to ride this" />
+            <list_entry value="1" display_value="S1 - Smaller obstacles like roots and small stones" short_description=" Erosion damage may increase difficulty. Soil may be loose in places. Tight turns, but no hairpin turns. Riding requires care and attention, but no special skill. Obstacles can be ridden over" />
+            <list_entry value="2" display_value="S2 - Obstacles such as large rocks and stones" short_description="Soil is often loose. Steps are expected. Wider hairpin turns, steepness of up to 70%. Requires some advanced riding skills" />
+            <list_entry value="3" display_value="S3 - Many sections with large obstacles such as boulders and large roots" short_description="Many hairpin and off-balance turns. Slippery surface and talus sections may be found. The surface may be very slippery. Constant concentration and very good skills needed" />
+            <list_entry value="4" display_value="S4 - Very steep and difficult, with sections having large boulders and roots" short_description="Frequent loose debris. Very steep sections with very tight hairpin turns and high steps that will cause the chainring to hit the ground. Some trials techniques will be necessary" />
+            <list_entry value="5" display_value="S5 - Very steep and difficult with big boulder fields and debris, and landslides" short_description="Speed must be carried for counter-ascents. If at all only short passages are available for accelerating and braking. Fallen trees may make very steep passages even more difficult. Very few Mountainbikers can actually ride at this level" />
+            <list_entry value="6" display_value="S6 - Classify ways with 6 that are not rideable at all for a mtbiker" short_description="Chains or stemples (metal rungs) on a via ferrata or simply unsecured alpine pathes that are not even partly rideable for the very best mtbikers (using trial techniques). Steepness is often >45°" />
+        </combo>
+        <combo key="mtb:scale:uphill" text="Difficulty grading for going uphill, see the same page than above" values_searchable="true" values_sort="false">
+            <list_entry value="0" display_value="0 - Graveled or hardened earth. Usually a highway=track" short_description="Good grip. Even unskilled mountainbikers can ride up here easily. Cars with good tire clearance can go down or up without problems. Average incline less than 10%, max. incline 15%" />
+            <list_entry value="1" display_value="1 - Graveled or hardened earth" short_description="Good Grip so wheelspin (also when standing) does not happen when taking care. Steep forest track or easy to ride footpath. Average incline less than 15%, max. incline 20%" />
+            <list_entry value="2" display_value="2 - Mostly stable, unsurfaced, partly washed out" short_description="Steady pedalling and balance needed. With good technique and reasonable fitness this should be still doable however. Average incline less than 20%, max. incline 25%" />
+            <list_entry value="3" display_value="3 - Variable Surface, tight corners, small steps, surface is rocks, earth or grass" short_description="Very good balance and steady, round pedalling needed. Without very good skills mtbikers have to push their bike uphill. Average incline less than 25%, max. incline 30%" />
+            <list_entry value="4" display_value="4 - Way is very steep, or in bad condition for pedalling uphill" short_description="Steps, trees, roots and tight corners are present and even good and strong mountainbikers will have to push or carry their bike for parts of the way. Average incline less than 30%, max. incline 40%" />
+            <list_entry value="5" display_value="5 - Way is too steep and/or difficult to ride uphill" short_description="We need this level for signalling to other mtbikers that on this part they have to push and carry the bike" />
+        </combo>
+        <space />
+        <label text="Trail's slope or incline" />
+        <label text="Used by routing algorithms, thus necessary if you filled the uphill difficulty!" />
+        <combo key="incline" text="Up/down or value in +- % as per the actual direction of the trail" values="up,down" default="" />
+        <space />
+        <combo key="mtb:type" text="Which type of mtbs the trail is suited for" default="" values="crosscountry,allmountain,freeride,downhill,northshore,slopestyle,dirtjump,trial" />
+        <combo key="class:bicycle:mtb" text="Trail's desireability for mtbikers" default="" values="-3,-2,-1,0,1,2,3" />
+        <space />
+        <combo key="foot" text="Legal access restriction for pedestrians" values="yes,private,customers,permissive,destination,agricultural,forestry,delivery,designated,official,unknown,no" default="yes" />
+        <combo key="bicycle" text="Legal access restriction for cyclists" values="yes,private,customers,permissive,destination,agricultural,forestry,delivery,designated,official,unknown,no" default="yes" />
+        <combo key="horse" text="Legal access restriction for equestrians" values="yes,private,customers,permissive,destination,agricultural,forestry,delivery,designated,official,unknown,no" default="" />
+        <space />
+        <text key="name" text="Name" default="" />
+        <text key="width" text="Width (meters, if measured)" default="" />
+        <text key="est_width" text="Estimated width (meters)" default="" />
+        <combo key="surface" text="Physical surface of roads/footpaths (material composition and/or structure)" values="paved,unpaved,asphalt,concrete,concrete:plates,concrete:lanes,paving_stones,sett,cobblestone,grass_paver,compacted,fine_gravel,gravel,pebblestone,ground,mud,sand,grass,wood,metal" default="" />
+        <combo key="sac_scale" text="Hiking difficulty (SAC Scale)" values_searchable="true" values_sort="false">
+            <list_entry value="hiking" display_value="T1 - Hiking trail" short_description="Trail well cleared. Area flat or slightly sloped, no fall hazard" />
+            <list_entry value="mountain_hiking" display_value="T2 - Mountain hiking trail" short_description="Trail with continuous line and balanced ascent. Terrain partially steep, fall hazard possible" />
+            <list_entry value="demanding_mountain_hiking" display_value="T3 - Difficult, exposed hiking trail" short_description="Exposed sites may be secured with ropes or chains, possible need to use hands for balance. Partly exposed sites with fall hazard, scree, pathless jagged rocks" />
+            <list_entry value="alpine_hiking" display_value="T4 - Difficult, exposed, steep alpine trail" short_description="Sometimes need for hand use to get ahead. Terrain quite exposed, precarious grassy acclivities, jagged rocks, facile snow-free glaciers" />
+            <list_entry value="demanding_alpine_hiking" display_value="T5 - Difficult alpine trail with climbing" short_description="Single plainly climbing up to second grade. Exposed, demanding terrain, jagged rocks, few dangerous glacier and snow" />
+            <list_entry value="difficult_alpine_hiking" display_value="T6 - Hazardous alpine trail with climbing" short_description="Climbing up to second grade. Often very exposed, precarious jagged rocks, glacier with danger to slip and fall" />
+        </combo>
+        <combo key="smoothness" text="Smoothness" values_searchable="true" values_sort="false">
+            <list_entry value="excellent" short_description=" As-new asphalt or concrete. For thin_rollers: all bikes, rollerblades, skateboards." />
+            <list_entry value="good" short_description="Asphalt or concrete showing the first signs of wear, such as narrow (max. 1.5 cm) cracks. For thin_wheels: road bikes" />
+            <list_entry value="intermediate" short_description="Asphalt and equivalent that shows signs of maintenance such as patches of repaired pavement, wider cracks (min. 2 cm)For wheels: city bikes, wheelchairs" />
+            <list_entry value="bad" short_description="Heavily damaged paved roads that badly need maintenance or smooth gravel road. For robust_wheels: trekking and gravel bikes." />
+            <list_entry value="very_bad" short_description="Unpaved roads with potholes and ruts, rough gravel road. For high_clearance vehicles: MTBs and some gravel bikes." />
+            <list_entry value="horrible" short_description="Unpaved tracks with ruts, rocks, etc. For off_road_wheels: MTB advised." />
+            <list_entry value="very_horrible" short_description="Tracks with deep ruts and other obstacles. For specialized_off_road_wheels: MTBs only." />
+            <list_entry value="impassable" short_description="No wheeled vehicle can pass it." />
+        </combo>
+        <combo key="trail_visibility" text="Trail visibility and orientation" values_searchable="true" values_sort="false">
+            <list_entry value="excellent" display_value="Excellent" short_description="Unambiguous path or markers everywhere. Orientation unproblematic, no map required" />
+            <list_entry value="good" display_value="Good" short_description="Next marker always visible, but sometimes has to be searched for. Basic sense of direction, map recommended" />
+            <list_entry value="intermediate" display_value="Intermediate" short_description="Track mostly visible. Good sense of direction, map required" />
+            <list_entry value="bad" display_value="Bad" short_description="Path sometimes invisible, route partly pathless. Basic skills in orientation" />
+            <list_entry value="horrible" display_value="Horrible" short_description="Often pathless. Advanced orientational skills" />
+            <list_entry value="no" display_value="No" short_description="Mostly pathless. Excellent orientational skills"/>
+        </combo>
+        <text key="mtb:description" text="Additional info for mtbikers" values="" default="" />
+        <space />
+        <label text="Don't forget to add the way to a relation if part of a mtb route" />
+        <label text="Tags will be deleted if left empty" />
+    </item>
+</presets>
