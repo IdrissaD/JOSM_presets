@@ -2,7 +2,7 @@
 <presets
     xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
     author="Idrissa Djepa"
-    shortdescription="Comprehensive presets for MTB trails"
+    shortdescription="Comprehensive preset for MTB trails"
     description="Fully detailed descriptions for all tags suitable for singletracks, no more need to open the OSM wiki pages next to JOSM"
     link="https://wiki.openstreetmap.org/wiki/Mountain_biking"
     version="[[revision]]_[[date]]">
