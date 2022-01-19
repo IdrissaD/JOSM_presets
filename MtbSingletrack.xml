@@ -1,91 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <presets
     xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
-    author="Idrissa Djepa"
+    author="Idrissa Djepa Creutz"
     website="https://github.com/IdrissaD/"
+    version="[[revision]]_[[date]]"
+    description="Fully detailed descriptions for all keys suitable for singletracks, no more need to open the OSM wiki pages next to JOSM"
+    fr.description="Descriptions détaillées pour toutes les clefs adaptées aux sentiers monotraces pour VTT, plus besoinb d'ouvrir les pages du wiki OSM à côté de JOSM"
     shortdescription="Comprehensive preset for MTB trails"
-    description="Fully detailed descriptions for all tags suitable for singletracks, no more need to open the OSM wiki pages next to JOSM"
+    fr.short_description="Préréglages complets pour sentiers VTT"
     link="https://wiki.openstreetmap.org/wiki/Mountain_biking"
-    version="[[revision]]_[[date]]">
+    icon="presets/shop/bicycle.svg">
 
-    <item name="MTB Singletrack" icon="presets/shop/bicycle.svg" type="way">
+    <item name="MTB Singletrack" fr.name="Monotrace de VTT" icon="presets/shop/bicycle.svg" type="way">
 
-        <link href="https://wiki.openstreetmap.org/wiki/Mountain_biking"
-          fr.href="https://wiki.openstreetmap.org/wiki/FR:Mountain_biking"
-          de.href="https://wiki.openstreetmap.org/wiki/DE:Mountain_biking"
-          it.href="https://wiki.openstreetmap.org/wiki/IT:Mountain_biking"
-          es.href="https://wiki.openstreetmap.org/wiki/ES:Mountain_biking"
-          nl.href="https://wiki.openstreetmap.org/wiki/NL:Mountain_biking" />
+        <link wiki="Mountain_biking"/>
 
-        <label text="Edit singletracks for MTB use. Intended for 'natural' trails, not so much for bikeparks or north shore trails, even if partly suitable." />
-        <label text="highway=path is mandatory, any other value will be overwritten." />
+        <space />
+
+        <label text="Edit singletracks for MTB use. Intended for 'natural' trails, not so much for bikeparks or north shore trails, even if partly suitable." fr.text="Éditez des sentiers monotraces dans une perspective de VTTiste. Convient plutôt aux sentiers naturels et pas complétement aux bike parks." />
+        <label text="Only suitable to &quot;highway=path&quot; ways, any other value will be overwritten." fr.text="Convient seulement aux ways &quot;highway=path&quot;, toute autre valeur sera écrasée." />
 
         <key key="highway" value="path" />
+        
         <space />
-        <label text="Difficulty grading for mtb use" />
-        <combo key="mtb:scale" text="Based on the scale Singletrail-skala (wiki.openstreetmap.org/wiki/Key:mtb_scale)" values_searchable="true" values_sort="false">
-            <list_entry value="0" display_value="S0 - Gravel or packed earth" short_description="Mostly forest and meadow paths. Sections with steps, rocks, or roots are not expected. Wide curves, easy to moderate slope. No special skills are needed to ride this" />
-            <list_entry value="1" display_value="S1 - Smaller obstacles like roots and small stones" short_description=" Erosion damage may increase difficulty. Soil may be loose in places. Tight turns, but no hairpin turns. Riding requires care and attention, but no special skill. Obstacles can be ridden over" />
-            <list_entry value="2" display_value="S2 - Obstacles such as large rocks and stones" short_description="Soil is often loose. Steps are expected. Wider hairpin turns, steepness of up to 70%. Requires some advanced riding skills" />
-            <list_entry value="3" display_value="S3 - Many sections with large obstacles such as boulders and large roots" short_description="Many hairpin and off-balance turns. Slippery surface and talus sections may be found. The surface may be very slippery. Constant concentration and very good skills needed" />
-            <list_entry value="4" display_value="S4 - Very steep and difficult, with sections having large boulders and roots" short_description="Frequent loose debris. Very steep sections with very tight hairpin turns and high steps that will cause the chainring to hit the ground. Some trials techniques will be necessary" />
-            <list_entry value="5" display_value="S5 - Very steep and difficult with big boulder fields and debris, and landslides" short_description="Speed must be carried for counter-ascents. If at all only short passages are available for accelerating and braking. Fallen trees may make very steep passages even more difficult. Very few Mountainbikers can actually ride at this level" />
-            <list_entry value="6" display_value="S6 - Classify ways with 6 that are not rideable at all for a mtbiker" short_description="Chains or stemples (metal rungs) on a via ferrata or simply unsecured alpine pathes that are not even partly rideable for the very best mtbikers (using trial techniques). Steepness is often >45°" />
+        <item_separator />
+        <space />
+
+        <label text="Difficulty grading for mtb use:" fr.text="Niveau de difficulté VTT :" />
+        <combo key="mtb:scale" text="Based on the scale Singletrail-skala (wiki.openstreetmap.org/wiki/Key:mtb_scale)" fr.text="Basé sur l'échelle internationale Singletrail-skala (wiki.openstreetmap.org/wiki/Key:mtb_scale)" values_searchable="true" values_sort="false">
+            <list_entry value="0" display_value="S0 - Gravel or packed earth" fr.display_value="S0 - Gravier ou terre tassée" short_description="Mostly forest and meadow paths. Sections with steps, rocks, or roots are not expected. Wide curves, easy to moderate slope. No special skills are needed to ride this" fr.short_description="Majoritairement des sentiers en forêt et prairies. Marches, rochers ou racines ne sont pas attendues. Virages larges, pentes faibles à modérées. Aucune technique particulière n'est nécessaire pour rouler ceci" />
+            <list_entry value="1" display_value="S1 - Smaller obstacles like roots and small stones" fr.display_value="S1 - Petits obstacles comme des racines ou des petites pierres" short_description="Erosion damage may increase difficulty. Soil may be loose in places. Tight turns, but no hairpin turns. Riding requires care and attention, but no special skill. Obstacles can be ridden over" fr.short_description="Les dégâts de l'érosion peuvent augmenter la difficulté. Le sol peut être instable par endroits. Virages serrés, mais pas d'épingles à cheveux. Le pilotage demande de l'attention, mais aucune technique particulière. Les obstacles peuvente être franchis en roulant" />
+            <list_entry value="2" display_value="S2 - Obstacles such as large rocks and stones" fr.display_value="S2 - Obstacles comme gros rochers et pierres" short_description="Soil is often loose. Steps are expected. Wider hairpin turns, steepness of up to 70%. Requires some advanced riding skills" fr.short_description="Le sol est souvent instable. Des marches sont attendues. Virages en épingle relativement larges, pente jusqu'à 70%. Demande des techniques avancées de pilotage" />
+            <list_entry value="3" display_value="S3 - Many sections with large obstacles such as boulders and large roots" fr.display_value="S3 - Beaucoup de sections avec de gros obstacles" short_description="Many hairpin and off-balance turns. Slippery surface and talus sections may be found. The surface may be very slippery. Constant concentration and very good skills needed" fr.short_description="Beaucoup d'épingles à cheveux et de virages en déséquilibre. Des sections glissantes et des éboulis peuvent être présents. Le sol peut être très glissant. Une concentration constate et de très bonnes compétences sont nécessaires" />
+            <list_entry value="4" display_value="S4 - Very steep and difficult, with sections having large boulders and roots" fr.display_value="S4 - Très pentu et difficile, avec des sections de gros rochers et racines" short_description="Frequent loose debris. Very steep sections with very tight hairpin turns and high steps that will cause the chainring to hit the ground. Some trials techniques will be necessary" fr.short_description="Débris instables fréquents. Sections très pentues avec des épingles à cheveux très serrées et de hautes marches qui peuvent entraîner le contact du pédalier avec le sol. Des techniques de trial sont nécessaires." />
+            <list_entry value="5" display_value="S5 - Very steep and difficult with big boulder fields and debris, and landslides" fr.display_value="S5 - Très pentu et difficile avec pierriers et éboulis" short_description="Speed must be carried for counter-ascents. If at all only short passages are available for accelerating and braking. Fallen trees may make very steep passages even more difficult. Very few Mountainbikers can actually ride at this level" fr.short_description="La vitesse doit être conservée pour des remontées. Si il y en a, les sections disponibles pour accélérer ou freiner sont très courtes. Des arbres tombés peuvent rendre des sections très pentues encore plus difficiles. Très peu de VTTistes peuvent réellement piloter à ce niveau" />
+            <list_entry value="6" display_value="S6 - Classify paths with 6 that are not rideable at all for a mtbiker" fr.display_value="S6 - Classez à 6 les sentiers qui ne sont pas du tout pilotables pour un VTTiste" short_description="Chains or stemples (metal rungs) on a via ferrata or simply unsecured alpine pathes that are not even partly rideable for the very best mtbikers (using trial techniques). Steepness is often >45°" fr.short_description="Mains courantes ou marches métalliques sur une via ferrata, ou simplement sentiers alpins dangereux qui ne sont même pas en partie descendables pour les tout meilleurs VTTistes (avec des techniques de trial). La pente est souvent supérieure à 45°" />
         </combo>
-        <combo key="mtb:scale:uphill" text="Difficulty grading for going uphill, see the same page than above" values_searchable="true" values_sort="false">
-            <list_entry value="0" display_value="0 - Graveled or hardened earth. Usually a highway=track" short_description="Good grip. Even unskilled mountainbikers can ride up here easily. Cars with good tire clearance can go down or up without problems. Average incline less than 10%, max. incline 15%" />
-            <list_entry value="1" display_value="1 - Graveled or hardened earth" short_description="Good Grip so wheelspin (also when standing) does not happen when taking care. Steep forest track or easy to ride footpath. Average incline less than 15%, max. incline 20%" />
-            <list_entry value="2" display_value="2 - Mostly stable, unsurfaced, partly washed out" short_description="Steady pedalling and balance needed. With good technique and reasonable fitness this should be still doable however. Average incline less than 20%, max. incline 25%" />
-            <list_entry value="3" display_value="3 - Variable Surface, tight corners, small steps, surface is rocks, earth or grass" short_description="Very good balance and steady, round pedalling needed. Without very good skills mtbikers have to push their bike uphill. Average incline less than 25%, max. incline 30%" />
-            <list_entry value="4" display_value="4 - Way is very steep, or in bad condition for pedalling uphill" short_description="Steps, trees, roots and tight corners are present and even good and strong mountainbikers will have to push or carry their bike for parts of the way. Average incline less than 30%, max. incline 40%" />
-            <list_entry value="5" display_value="5 - Way is too steep and/or difficult to ride uphill" short_description="We need this level for signalling to other mtbikers that on this part they have to push and carry the bike" />
+
+        <combo key="mtb:scale:uphill" text="Difficulty grading for going uphill, see the same page than above" fr.text="Niveau de difficulté en montée, cf. même page qu'au-dessus" values_searchable="true" values_sort="false">
+            <list_entry value="0" display_value="0 - Graveled or hardened earth. Usually a &quot;highway=track&quot;" fr.display_value="0 - Gravier ou terre tassée. Souvent une &quot;highway=track&quot;" short_description="Good grip. Even unskilled mountainbikers can ride up here easily. Cars with good tire clearance can go down or up without problems. Average incline less than 10%, max. incline 15%" fr.short_description="Bon grip. Même les VTTistes débutants peuvent monter ici facilement. Des voitures avec une bonne garde au sol peuvent y monter ou descendre sans problème. Pente moyenne inférieure à 10%, pente maximale de 15%" />
+            <list_entry value="1" display_value="1 - Graveled or hardened earth" fr.display_value="1 - Gravier ou terre tassée" short_description="Good Grip so wheelspin (also when standing) does not happen when taking care. Steep forest track or easy to ride footpath. Average incline less than 15%, max. incline 20%" fr.short_description="Bon grip qui empêche la perte d'adhérence en faisant attention, même en danseuse. Piste forestière pentue ou sentier pédestre facile. Pente moyenne inférieure à 15%, pente maximale 20%" />
+            <list_entry value="2" display_value="2 - Mostly stable, unsurfaced, partly washed out" fr.display_value="2 - Majoritairement stable, non revêtu, partiellement érodé" short_description="Steady pedalling and balance needed. With good technique and reasonable fitness this should be still doable however. Average incline less than 20%, max. incline 25%" fr.short_description="Un pédalage constant et de l'équilibre sont nécessaires. Avec une bonne technique et une forme physique raisonnable cela devrait être faisable dans l'ensemble. Pente moyenne inférieure à 20%, pente maximale de 25%" />
+            <list_entry value="3" display_value="3 - Variable Surface, tight corners, small steps, surface is rocks, earth or grass" fr.display_value="3 - Revêtement variable, virages serrés, petites marches" short_description="Very good balance and steady, round pedalling needed. Without very good skills mtbikers have to push their bike uphill. Average incline less than 25%, max. incline 30%" fr.short_description="Revêtement de pierres, terre ou herbe. Un très bon équilibre et un pédalage rond et constant sont nécessaires. Sans de très bonnes compétences les VTTistes devront pousser leur vélo. Pente moyenne inférieure à 25%, pente maximale 30%" />
+            <list_entry value="4" display_value="4 - Way is very steep, or in bad condition for pedalling uphill" fr.display_value="4 - Le sentier est très pentu, ou en mauvaise condition pour y monter" short_description="Steps, trees, roots and tight corners are present and even good and strong mountainbikers will have to push or carry their bike for parts of the way. Average incline less than 30%, max. incline 40%" fr.short_description="Marches, arbres, racines et virages serrés sont présents, et même les VTTistes bons et forts devront pousser ou porter leur vélo sur une partie du chemin. Pente moyenne inférieure à 30%, pente maximale 40%" />
+            <list_entry value="5" display_value="5 - Way is too steep and/or difficult to ride uphill" fr.display_value="5 - Le chemin est trop pentu ou difficile pour y monter en roulant" short_description="We need this level for signalling to other mtbikers that on this part they have to push and carry the bike" fr.short_description="Nous avons besoin de ce niveau pour signaler aux autres VTTistes que sur cette partie ils devront pousser et porter le vélo" />
         </combo>
+        
         <space />
-        <label text="Trail's slope or incline" />
-        <label text="Used by routing algorithms, thus necessary if you filled the uphill difficulty!" />
-        <combo key="incline" text="Is the OSM way's direction up or down the slope? Fill with up, down or value in +- %" values="up,down" default="" />
+        
+        <label text="Trail's slope or incline:" fr.text="Pente ou inclinaison du sentier :" />
+        <label text="Used by routing algorithms, thus necessary if you filled the uphill difficulty!" fr.text="Utilisé par les algorithmes de routage, c'est donc une clef nécessaire si vous avez renseigné le niveau de difficulté en montée !" />
+        <combo key="incline" text="Is the OSM way's direction up or down the slope? Fill with &quot;up&quot;, &quot;down&quot; or value in +- %" fr.text="Est-ce que la direction de la way d'OSM est vers le bas ou le haut ? Remplir avec &quot;up&quot;, &quot;down&quot; ou une valeur en +- %" values="up,down" default="" />
+        
         <space />
-        <combo key="surface" text="Physical surface of roads/footpaths (material composition and/or structure)" values="paved,unpaved,asphalt,concrete,concrete:plates,concrete:lanes,paving_stones,sett,cobblestone,grass_paver,compacted,fine_gravel,gravel,pebblestone,ground,mud,sand,grass,wood,metal" default="" />
-        <combo key="smoothness" text="Smoothness" values_searchable="true" values_sort="false">
-            <list_entry value="excellent" short_description=" As-new asphalt or concrete. For thin_rollers: all bikes, rollerblades, skateboards." />
-            <list_entry value="good" short_description="Asphalt or concrete showing the first signs of wear, such as narrow (max. 1.5 cm) cracks. For thin_wheels: road bikes" />
-            <list_entry value="intermediate" short_description="Asphalt and equivalent that shows signs of maintenance such as patches of repaired pavement, wider cracks (min. 2 cm)For wheels: city bikes, wheelchairs" />
-            <list_entry value="bad" short_description="Heavily damaged paved roads that badly need maintenance or smooth gravel road. For robust_wheels: trekking and gravel bikes." />
-            <list_entry value="very_bad" short_description="Unpaved roads with potholes and ruts, rough gravel road. For high_clearance vehicles: MTBs and some gravel bikes." />
-            <list_entry value="horrible" short_description="Unpaved tracks with ruts, rocks, etc. For off_road_wheels: MTB advised." />
-            <list_entry value="very_horrible" short_description="Tracks with deep ruts and other obstacles. For specialized_off_road_wheels: MTBs only." />
-            <list_entry value="impassable" short_description="No wheeled vehicle can pass it." />
+        <item_separator />
+        <space />
+        
+        <combo key="surface" text="Physical surface of path (material composition and/or structure)" fr.text="Revêtement du sentier (composition et/ou structure)" values_searchable="true" values_sort="false" default="">
+            <list_entry value="ground" display_value="ground, no special surface" fr.display_value="Sol, pas de revêtement spécifique" />
+            <list_entry value="rock" fr.display_value="Rocher" />
+            <list_entry value="gravel" fr.display_value="Graviers" />
+            <list_entry value="pebblestone" fr.display_value="Galets non reliés" />
+            <list_entry value="fine_gravel" fr.display_value="Gravillons" />
+            <list_entry value="compacted" fr.display_value="Mélange compacté" />
+            <list_entry value="sand" fr.display_value="Sable" />
+            <list_entry value="grass" fr.display_value="Herbe" />
+            <list_entry value="mud" fr.display_value="Boue" />
+            <list_entry value="snow" fr.display_value="Neige" />
+            <list_entry value="ice" fr.display_value="Glace" />
+            <list_entry value="woodship" fr.display_value="Copeaux de bois" />
+            <list_entry value="wood" fr.display_value="Bois" />
+            <list_entry value="metal" fr.display_value="Métal" />
+            <list_entry value="sett" fr.display_value="Pavés taillés" />
+            <list_entry value="paving_stones" fr.display_value="Pavés en béton ou réguliers" />
+            <list_entry value="unhewn_cobblestone" fr.display_value="Pavés grossiers avec matière liante" />
+            <list_entry value="concrete:plates" display_value="concrete plates placed closely together" fr.display_value="Plaques de béton posées les unes à la suite des autres" />
+            <list_entry value="concrete" fr.display_value="Béton" />
+            <list_entry value="chipseal" fr.display_value="Enduit superficiel routier" />
+            <list_entry value="asphalt" fr.display_value="Asphalte" />
         </combo>
-        <combo key="trail_visibility" text="Trail visibility and orientation" values_searchable="true" values_sort="false">
-            <list_entry value="excellent" display_value="Excellent" short_description="Unambiguous path or markers everywhere. Orientation unproblematic, no map required" />
-            <list_entry value="good" display_value="Good" short_description="Next marker always visible, but sometimes has to be searched for. Basic sense of direction, map recommended" />
-            <list_entry value="intermediate" display_value="Intermediate" short_description="Track mostly visible. Good sense of direction, map required" />
-            <list_entry value="bad" display_value="Bad" short_description="Path sometimes invisible, route partly pathless. Basic skills in orientation" />
-            <list_entry value="horrible" display_value="Horrible" short_description="Often pathless. Advanced orientational skills" />
-            <list_entry value="no" display_value="No" short_description="Mostly pathless. Excellent orientational skills"/>
+
+        <combo key="smoothness" text="Smoothness" fr.text="Roulabilité du revêtement" values_searchable="true" values_sort="false">
+            <list_entry value="excellent" display_value="Excellent" fr.display_value="Excellente" short_description=" As-new asphalt or concrete. For thin_rollers: all bikes, rollerblades, skateboards" fr.short_description="Asphalte ou béton comme neufs. Adapté aux roues fines de : tous les vélos, rollers, skateboards" />
+            <list_entry value="good" display_value="Good" fr.display_value="Bonne" short_description="Asphalt or concrete showing the first signs of wear, such as narrow (max. 1.5 cm) cracks. For thin_wheels: road bikes" fr.short_description="Asphalte ou béton montrant de premiers signes d'usure, comme d'étroites craquelures (max. 1.5 cm). Adapté aux roues fines de : vélos de route" />
+            <list_entry value="intermediate" display_value="Intermediate" fr.display_value="Intermédiaire" short_description="Asphalt and equivalent that shows signs of maintenance such as patches of repaired pavement, wider cracks (min. 2 cm). For wheels: city bikes, wheelchairs" fr.short_description="Asphalte ou équivalent montrant des signes d'entretien comme des réparations ou des nids de poule comblés, craquelures plus larges (min. 2 cm). Adapté aux roues normales de : vélos de ville, chaises roulantes " />
+            <list_entry value="bad" display_value="Bad" fr.display_value="Mauvaise" short_description="Heavily damaged paved roads that badly need maintenance or smooth gravel road. For robust_wheels: trekking and gravel bikes" fr.short_description="Routes au revêtement lourdement endommagé qui nécessite un entretien sérieux, ou route de graviers fins. Adapté aux roues robustes de : vélos de trekking et de gravel" />
+            <list_entry value="very_bad" display_value="Very bad" fr.display_value="Très mauvaise" short_description="Unpaved roads with potholes and ruts, rough gravel road. For high_clearance vehicles: MTBs and some gravel bikes" fr.short_description="Routes non revêtues avec nid de poules et ornières, ou route de graviers grossiers. Adapté aux véhicules à haute garde au sol : VTT et certains vélos de gravel" />
+            <list_entry value="horrible" display_value="Horrible" fr.display_value="Horrible" short_description="Unpaved tracks with ruts, rocks, etc. For off_road_wheels: MTB advised" fr.short_description="Pistes non revêtues avec ornières, pierres, etc. Adapté aux roues tout-terrain de : VTT" />
+            <list_entry value="very_horrible" display_value="Very horrible" fr.display_value="Très horrible" short_description="Tracks with deep ruts and other obstacles. For specialized_off_road_wheels: MTBs only" fr.short_description="Pistes avec de profondes orinières et autres obstacles. Pour roues tout-terrain spécialisées : seulement VTT" />
+            <list_entry value="impassable" display_value="Impassable" fr.display_value="Impassable" short_description="No wheeled vehicle can pass it" fr.short_description="Aucun véhicule à roue ne peut passer" />
         </combo>
-        <combo key="bicycle" text="Legal access restriction for cyclists" values="yes,private,customers,permissive,destination,agricultural,forestry,delivery,designated,official,unknown,no" default="" />
-        <combo key="sac_scale" text="Hiking difficulty (SAC Scale)" values_searchable="true" values_sort="false">
-            <list_entry value="hiking" display_value="T1 - Hiking trail" short_description="Trail well cleared. Area flat or slightly sloped, no fall hazard" />
-            <list_entry value="mountain_hiking" display_value="T2 - Mountain hiking trail" short_description="Trail with continuous line and balanced ascent. Terrain partially steep, fall hazard possible" />
-            <list_entry value="demanding_mountain_hiking" display_value="T3 - Difficult, exposed hiking trail" short_description="Exposed sites may be secured with ropes or chains, possible need to use hands for balance. Partly exposed sites with fall hazard, scree, pathless jagged rocks" />
-            <list_entry value="alpine_hiking" display_value="T4 - Difficult, exposed, steep alpine trail" short_description="Sometimes need for hand use to get ahead. Terrain quite exposed, precarious grassy acclivities, jagged rocks, facile snow-free glaciers" />
-            <list_entry value="demanding_alpine_hiking" display_value="T5 - Difficult alpine trail with climbing" short_description="Single plainly climbing up to second grade. Exposed, demanding terrain, jagged rocks, few dangerous glacier and snow" />
-            <list_entry value="difficult_alpine_hiking" display_value="T6 - Hazardous alpine trail with climbing" short_description="Climbing up to second grade. Often very exposed, precarious jagged rocks, glacier with danger to slip and fall" />
+
+        <combo key="trail_visibility" text="Trail visibility and orientation" fr.text="Visibilité du sentier et orientation" values_searchable="true" values_sort="false">
+            <list_entry value="excellent" display_value="Excellent" fr.display_value="Excellente" short_description="Unambiguous path or markers everywhere. Orientation unproblematic, no map required" fr.short_description="Chemin non ambigu ou balisage omniprésent. Orientation facile, pas de carte nécessaire" />
+            <list_entry value="good" display_value="Good" fr.display_value="Bonne" short_description="Next marker always visible, but sometimes has to be searched for. Basic sense of direction, map recommended" fr.short_description="Prochaine marque toujours visible, mais doit parfois être cherchée du regarde. Sens élémentaire de l'orientation, carte recommandée" />
+            <list_entry value="intermediate" display_value="Intermediate" fr.display_value="Intermédiaire" short_description="Track mostly visible. Good sense of direction, map required" fr.short_description="Chemin partiellement visible. Bon sens de l'orientation et carte nécessaires" />
+            <list_entry value="bad" display_value="Bad" fr.display_value="Mauvaise" short_description="Path sometimes invisible, route partly pathless. Basic skills in orientation" fr.short_description="Chemin parfois invisible, l'itinéraire est partiellement sans chemin. Compétences basiques en orientation" />
+            <list_entry value="horrible" display_value="Horrible" short_description="Often pathless. Advanced orientational skills" fr.short_description="Souvent sans chemin. Compétences d'orientation avancées" />
+            <list_entry value="no" display_value="No" fr.display_value="Aucune" short_description="Mostly pathless. Excellent orientational skills" fr.short_description="Majoritairement sans chemin. Excellentes compétences d'orientation" />
         </combo>
+
+        <combo key="bicycle" text="Legal access restriction for cyclists" values_searchable="true" values_sort="false" default="">
+            <list_entry value="yes" short_description="the public has an official, legally-enshrined right of access" fr.display_value="Oui" fr.short_description="le public a un droit d'accès légal à ce sentier" />
+            <list_entry value="permissive" short_description="open to general traffic until such time as the owner revokes the permission" fr.display_value="Permissif" fr.short_description="accès possible du public grâce à l'autorisation révocable du propriétaire" />
+            <list_entry value="permit" short_description="open only to people who have obtained a permit granting them access (ex: some wilderness areas)" fr.display_value="Permis" fr.short_description="accès soumis à l'obtention d'un permis (ex : certaines réserves naturelles)" />
+            <list_entry value="private" short_description="Only with individual permission" fr.display_value="Privé" fr.short_description="accès soumis à une autorisation individuelle" />
+        </combo>
+
+        <combo key="sac_scale" text="Hiking difficulty (SAC Scale)" fr.text="Niveau de difficulté pédestre (échelle du Club Alpin Suisse)" values_searchable="true" values_sort="false">
+            <list_entry value="hiking" display_value="T1 - Hiking" fr.display_value="T1 - Randonnée" short_description="Trail well cleared. Area flat or slightly sloped, no fall hazard" fr.short_description="Sentier bien dégagé. Zone plate ou légèrement pentue, pas de risque de chute" />
+            <list_entry value="mountain_hiking" display_value="T2 - Mountain hiking" fr.display_value="T2 - Randonnée en montagne" short_description="Trail with continuous line and balanced ascent. Terrain partially steep, fall hazard possible" fr.short_description="Sentier continu et ascension équilibrée. Terrain partiellement pentu, risque de chute éventuel" />
+            <list_entry value="demanding_mountain_hiking" display_value="T3 - Demanding mountain hiking" fr.display_value="T3 - Randonnée en montagne exigeante" short_description="Exposed sites may be secured with ropes or chains, possible need to use hands for balance. Partly exposed sites with fall hazard, scree, pathless jagged rocks" fr.short_description="Sentier difficile et exposé. Les sections exposées peuvent être sécurisées avec des cordes ou des chaînes, il est possible de devoir utiliser les mains pour l'équilibre. Sections partiellement exposées avec risque de chute, pierriers et éboulis sans chemin" />
+            <list_entry value="alpine_hiking" display_value="T4 - Alpine hiking" fr.display_value="T4 - Randonnée alpine" short_description="Sometimes need for hand use to get ahead. Terrain quite exposed, precarious grassy acclivities, jagged rocks, facile snow-free glaciers" fr.short_description="Nécessite parfois les mains pour avancer. Terrain assez exposé, pentes herbeuses précaires, rochers pointus, glaciers faciles sans neige" />
+            <list_entry value="demanding_alpine_hiking" display_value="T5 - Demanding alpine hiking" fr.display_value="T5 - Randonnée alpine exigeante" short_description="May include isolated easy climbing pitches. Exposed, demanding terrain, jagged rocks, few dangerous glacier and snow" fr.short_description="Souvent sans traces. Quelques passages d'escalade faciles. Terrain exposé, exigeant, pentes raides mêlées de rochers. Glaciers et névés présentant un risque de glissade." />
+            <list_entry value="difficult_alpine_hiking" display_value="T6 - Difficult alpine hiking" fr.display_value="T6 - Randonnée alpine difficile" short_description="Climbing up to second grade. Often very exposed, precarious jagged rocks, glacier with danger to slip and fall" fr.short_description="La plupart du temps sans traces, passages d'escalade jusqu'à 2. En général non balisé. Souvent très exposé. Pentes mêlées de rochers délicates. Glaciers avec risque accru de glissade. " />
+        </combo>
+        
         <space />
-        <combo key="mtb:type" text="Which type of mtbs the trail is suited for" default="" values="crosscountry,allmountain,freeride,downhill,northshore,slopestyle,dirtjump,trial" />
-        <combo key="class:bicycle:mtb" text="Trail's desireability for mtbikers" default="" values="-3,-2,-1,0,1,2,3" />
+        
+        <combo key="mtb:type" text="Which practice is best suited to this trail?" fr.text="Quelle pratique est la plus adaptée à ce sentier ?" default="" values="crosscountry,allmountain,freeride,downhill,northshore,slopestyle,dirtjump,trial" />
+        <combo key="class:bicycle:mtb" text="Trail's desireability for mtbikers" fr.text="Intérêt de ce sentier pour les VTTistes" default="" values="-3,-2,-1,0,1,2,3" />
+        
         <space />
-        <combo key="foot" text="Legal access restriction for pedestrians" values="yes,private,customers,permissive,destination,agricultural,forestry,delivery,designated,official,unknown,no" default="yes" />
-        <combo key="horse" text="Legal access restriction for equestrians" values="yes,private,customers,permissive,destination,agricultural,forestry,delivery,designated,official,unknown,no" default="" />
+        <item_separator />
         <space />
-        <text key="name" text="Path name" default="" />
-        <text key="width" text="Width (meters, if measured)" default="" />
-        <text key="est_width" text="Estimated width (meters)" default="" />
-        <text key="mtb:description" text="Additional info for mtbikers" default="" />
+        
+        <combo key="foot" text="Legal access restriction for pedestrians" values_searchable="true" values_sort="false" default="yes">
+            <list_entry value="yes" short_description="the public has an official, legally-enshrined right of access" fr.display_value="Oui" fr.short_description="le public a un droit d'accès légal à ce sentier" />
+            <list_entry value="permissive" short_description="open to general traffic until such time as the owner revokes the permission" fr.display_value="Permissif" fr.short_description="accès possible du public grâce à l'autorisation révocable du propriétaire" />
+            <list_entry value="permit" short_description="open only to people who have obtained a permit granting them access (ex: some wilderness areas)" fr.display_value="Permis" fr.short_description="accès soumis à l'obtention d'un permis (ex : certaines réserves naturelles)" />
+            <list_entry value="private" short_description="Only with individual permission" fr.display_value="Privé" fr.short_description="accès soumis à une autorisation individuelle" />
+        </combo>
+
+        <combo key="horse" text="Legal access restriction for equestrians" values_searchable="true" values_sort="false" default="">
+            <list_entry value="yes" short_description="the public has an official, legally-enshrined right of access" fr.display_value="Oui" fr.short_description="le public a un droit d'accès légal à ce sentier" />
+            <list_entry value="permissive" short_description="open to general traffic until such time as the owner revokes the permission" fr.display_value="Permissif" fr.short_description="accès possible du public grâce à l'autorisation révocable du propriétaire" />
+            <list_entry value="permit" short_description="open only to people who have obtained a permit granting them access (ex: some wilderness areas)" fr.display_value="Permis" fr.short_description="accès soumis à l'obtention d'un permis (ex : certaines réserves naturelles)" />
+            <list_entry value="private" short_description="Only with individual permission" fr.display_value="Privé" fr.short_description="accès soumis à une autorisation individuelle" />
+        </combo>
+        
         <space />
-        <label text="Don't forget to add the way to a relation if part of a mtb route." />
-        <label text="Tags will be deleted if left empty." />
+        
+        <text key="name" text="Path name" fr.text="Nom du sentier" default="" />
+        <text key="width" text="Width (meters, if measured)" fr.text="Largeur du sentier (en mètres, si mesurée)" default="" />
+        <text key="est_width" text="Estimated width (meters)" fr.text="Largeur estimée (en mètres)" default="" />
+        <text key="mtb:description" text="Additional info for mtbikers" fr.text="Informations additionnelles pour VTTistes" default="" />
+
+        <space />
+
+        <label text="Don't forget to add the way to a relation if part of a mtb route." fr.text="N'oubliez pas d'ajouter la way à une relation si elle fait partie d'un itinéraire VTT." />
+        <label text="Tags will be deleted if left empty." fr.text="Les tags seront supprimés si laissés vides." />
     </item>
 </presets>
