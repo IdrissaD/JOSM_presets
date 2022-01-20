@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets
+    xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+    author="Idrissa Djepa Creutz"
+    website="https://github.com/IdrissaD/"
+    version="[[revision]]_[[date]]"
+    description="Comprehensive presets for non-motorized routes with detailed key descriptions (hiking, cycling, winter sports...) / Translated in french"
+    fr.description="Préréglages complets pour itinéraires non-motorisés avec descriptions détaillées des clefs (randonnée, vélo, sports d'hiver...)"
+    shortdescription="Comprehensive presets for non-motorized routes"
+    fr.shortdescription="Préréglages complets pour itinéraires non-motorisés"
+    link="https://wiki.openstreetmap.org/wiki/Key:route#Non-motorized_land_routes"
+    icon="presets/misc/route.svg">
+
+    <chunk id="type_route" >
+        <key
+            key="type"
+            value="route" />
+    </chunk>
+
+    <chunk id="basic_info" >
+        <text
+        key="operator"
+        text="Name of the organization that operates the route"
+        fr.text="Nom de l'organisation responsable de l'itinéraire"
+        wiki="Key:operator" />
+
+        <text
+            key="website"
+            text="Route's website"
+            fr.text="Site web de l'itinéraire" />
+    
+        <text
+            key="name"
+            text="Local name of the route"
+            fr.text="Nom de l'itinéraire dans la langue locale" />
+
+        <text
+            key="name:en"
+            text="Name of the route translated in english"
+            fr.text="Nom de l'itinéraire traduit en anglais" />
+    </chunk>
+
+    <chunk id="piste_info" >
+        <combo
+            key="piste:type"
+            text="Select the right winter sport here"
+            fr.text="Sélectionnez le bon sport d'hiver ici"
+            values_searchable="true"
+            values_sort="false">
+
+            <list_entry
+                value="nordic"
+                display_value="Nordic/cross country skiing" 
+                fr.display_value="Ski de fond/nordique" />
+            <list_entry
+                value="skitour"
+                display_value="Ski touring"
+                fr.display_value="Ski de randonnée" />
+            <list_entry
+                value="downhill"
+                display_value="Alpine/downhill skiing"
+                fr.display_value="Ski alpin/de descente" />
+            <list_entry
+                value="sled"
+                display_value="Sledding"
+                fr.display_value="Luge" />
+            <list_entry
+                value="hike"
+                display_value="Hiking/snowshoeing"
+                fr.display_value="Raquettes/randonnée neige" />
+        </combo>
+
+        <combo
+            key="piste:grooming"
+            text="Grooming type of the route"
+            fr.text="Type de damage de l'itinéraire"
+            values_searchable="true"
+            values_sort="false">
+
+            <list_entry
+                value="classic"
+                display_value="Mechanically groomed"
+                fr.display_value="Damage mécanique" />
+            <list_entry
+                value="backcountry"
+                display_value="Not groomed"
+                fr.display_value="Non damé" />
+            <list_entry
+                value="skating"
+                display_value="Skating: wide piste for skating (or 'free') style nordic"
+                fr.display_value="Skating : piste large pour pratique du skating" />
+            <list_entry
+                value="mogul"
+                display_value="Mogul: a &quot;piste:type=downhill&quot; groomed for Mogul skiing"
+                fr.display_value="Ski de bosses : une &quot;piste:type=downhill&quot; damée pour du ski de bosses" />
+        </combo>
+    </chunk>
+
+    <chunk id="route_details">
+        <check
+            key="roundtrip"
+            text="=> Check if the route is a roundtrip (departure and arrival points are identical)."
+            fr.text="=> Cocher si l'itinéraire est une boucle (mêmes points de départ d'arrivée)"
+            default="yes" />
+
+        <text
+            key="from"
+            text="Name of the starting point"
+            fr.text="Nom du point de départ" />
+
+        <text
+            key="to"
+            text="Name of the ending point"
+            fr.text="Nom du point d'arrivée" />
+
+        <text
+            key="symbol"
+            text="Description of the symbols used to follow the route (ex: &quot;Cévennes National Park symbol&quot;)"
+            fr.text="Description des symboles utilisés pour suivre l'itinéraire (ex: &quot;Logo du Parc national des Cévennes&quot;)" />
+
+        <text
+            key="osmc:symbol"
+            text="Machine readable description of the symbols used to follow the route (ex: &quot;red:red_dot&quot;)"
+            fr.text="Description lisible par machine des symboles utilisés pour suivre l'itinéraire (ex: &quot;red:red_dot&quot;)" />
+
+        <text
+            key="colour"
+            text="Official colour associated to the route (CSS color name or hex triplet code)"
+            fr.text="Couleur officielle associée à l'itinéraire (nom de couleur CSS ou code hexadécimal)" />
+
+        <text
+            key="ref"
+            text="Reference code of the route (ex: &quot;EV5&quot; for &quot;EuroVélo 5&quot;)"
+            fr.text="Code de référence de l'itinéraire (ex : &quot;EV5&quot; pour &quot;Eurovélo 5&quot;)" />
+
+        <label
+            text="Check if the route is signposted and the signs are only visible if you go in one specific direction:"
+            fr.text="Cocher si l'itinéraire est balisé avec des panneaux visible dans seulement une direction :" />
+        <check
+            key="signed_direction"
+            text="   (it doesn't mean that it's forbidden to go in the other direction, but signs won't be visible)"
+            fr.text="   (cela ne signifie pas qu'il est interdit d'aller dans l'autre direction, seulement que les panneaux ne seront pas visibles)" />
+            <!-- white spaces in texts intended for form layout -->
+
+    </chunk>
+
+    <chunk id="foot_network">
+        <combo
+            key="network"
+            text="Importance of the route"
+            fr.text="Importance de l'itinéraire"
+            values_searchable="true"
+            values_sort="false">
+            
+            <list_entry
+                value="iwn"
+                display_value="International route"
+                fr.display_value="Itinéraire international" />
+            <list_entry
+                value="nwn"
+                display_value="National route"
+                fr.display_value="Itinéraire national" />
+            <list_entry
+                value="rwn"
+                display_value="Regional route"
+                fr.display_value="Itinéraire régional" />
+            <list_entry
+                value="lwn"
+                display_value="Local route"
+                fr.display_value="Itinéraire local" />
+        </combo>
+    </chunk>
+
+    <chunk id="cycling_network">
+        <combo
+            key="network"
+            text="Importance of the route"
+            fr.text="Importance de l'itinéraire"
+            values_searchable="true"
+            values_sort="false">
+
+            <list_entry
+                value="icn"
+                display_value="International route"
+                fr.display_value="Itinéraire international" />
+            <list_entry
+                value="ncn"
+                display_value="National route"
+                fr.display_value="Itinéraire national" />
+            <list_entry
+                value="rcn"
+                display_value="Regional route"
+                fr.display_value="Itinéraire régional" />
+            <list_entry
+                value="lcn"
+                display_value="Local route"
+                fr.display_value="Itinéraire local" />
+        </combo>
+
+        <text
+            key="cycle_network"
+            text="Specific bicycle network if applicable (ex: &quot;EuroVélo&quot; for &quot;EuroVélo 5&quot;)"
+            fr.text="Réseau cyclable spécifique si applicable (ex : &quot;EuroVélo&quot; for &quot;EuroVélo 5&quot;)" />
+    </chunk>
+
+    <chunk id="horse_network">
+        <combo
+            key="network"
+            text="Importance of the route"
+            fr.text="Importance de l'itinéraire"
+            values_searchable="true"
+            values_sort="false">
+            <list_entry
+                value="ihn"
+                display_value="International route"
+                fr.display_value="Itinéraire international" />
+            <list_entry
+                value="nhn"
+                display_value="National route"
+                fr.display_value="Itinéraire national" />
+            <list_entry
+                value="rhn"
+                display_value="Regional route"
+                fr.display_value="Itinéraire régional" />
+            <list_entry
+                value="lhn"
+                display_value="Local route"
+                fr.display_value="Itinéraire local" />
+        </combo>
+    </chunk>
+
+    <chunk id="other_network">
+        <text
+            key="network"
+            text="Name of the route's network"
+            fr.text="Nom du réseau de l'itinéraire" />
+    </chunk>
+
+    <chunk id="numerical_info">
+        <text
+            key="distance"
+            text="Distance covered by the route, in kilometers and with a a point for decimals (ex: &quot;12.5&quot;)"
+            fr.text="Longueur de l'itinéraire, en kilomètres et avec un point pour les décimales" />
+
+        <text
+            key="ascent"
+            text="Total ascent of the route (in meters)"
+            fr.text="Dénivelé positif total (en mètres)" />
+
+        <text
+            key="descent"
+            text="Total descent of the route, only if the route isn't a roundtrip (in meters)"
+            fr.text="Dénivelé négatif total, seulement si l'itinéraire n'est pas une boucle (en mètres)" />
+    </chunk>
+
+    <chunk id="other_info">
+        <text
+            key="description"
+            text="What is special about this route? This is not for guiding instructions. (in local language)"
+            fr.text="Description générale de l'itinéraire. Cette clef n'est pas prévue pour des instructions de direction. (dans la langue locale)" />
+
+        <text
+            key="description:en"
+            text="What is special about this route? This is not for guiding instructions. (in english language)"
+            fr.text="Description générale de l'itinéraire. Cette clef n'est pas prévue pour des instructions de direction. (traduite en anglais)" />
+
+        <label
+            text="Check if the route has an educational purpose, be it natural, cultural, historical:"
+            fr.text="Cocher si l'itinéraire a une dimension éducative, par exemple écologique, culturelle, historique :" />
+        <check
+            key="educational"
+            text="   (educational routes have marked stations along the way with information provided to the public)" 
+            fr.text="   (les itinéraires éducatifs ont des panneaux d'information à destination du public sur leur trajet)"
+            disable_off="true" />
+            <!-- spaces in texts intended for form layout -->
+        <space />
+
+        <text
+            key="wikipedia"
+            text="Link to the route's Wikipedia page (ex: &quot;fr:Chemin de Stevenson&quot;)"
+            fr.text="Lien vers la page Wikipédia de l'itinéraire (ex : &quot;fr:Chemin de Stevenson&quot;)" />
+
+        <combo
+            key="state"
+            text="Current operational state of the route"
+            fr.text="État opérationnel actuel de l'itinéraire"
+            values_searchable="true"
+            values_sort="false">
+
+            <list_entry
+                value="proposed"
+                display_value="Proposed but not yet signposted/in operation"
+                fr.display_value="En création mais pas encore balisée ou complète" />
+            <list_entry
+                value="connection"
+                display_value="Connecting route not part of the core route"
+                fr.display_value="Liaison : un itinéraire de liaison" />
+            <list_entry
+                value="alternate"
+                display_value="Alternate route not part of the core route"
+                fr.display_value="Itinéraire bis, alternatif" />
+        </combo>
+
+        <space />
+
+        <label
+            text="Tags will be deleted if left empty."
+            fr.text="Les tags seront supprimés si laissés vides." />
+    </chunk>
+
+<!--            START OF THE ITEMS            -->
+
+    <group
+        name="Non-motorized routes"
+        fr.name="Itinéraires non-motorisés"
+        icon="presets/misc/route.svg">
+
+        <item
+            name="Hiking, foot, running"
+            fr.name="Randonnée, marche, course à pied"
+            type="relation"
+            match_expression="route=hiking | route=foot | route=running"
+            icon="presets/misc/route.svg">
+
+            <link wiki="Key:route#Non-motorized_land_routes" />
+            
+            <reference ref="type_route" />
+
+            <space />
+            
+            <label
+                text="Comprehensive preset for hiking, foot and running routes."
+                fr.text="Préréglages complets pour les itinéraires de randonnée, marche et course à pied." />
+
+            <label
+                text="Only suitable to &quot;type=route&quot; and &quot;route=hiking|running|foot&quot; relations. Any other value will be overwritten."
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=hiking|running|foot&quot;. Toute autre valeur sera écrasée." />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="basic_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="route_details" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="foot_network" />
+
+            <reference ref="numerical_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_info" />
+        </item>
+
+        <item
+            name="Cycling or MTB"
+            fr.name="Vélo et VTT"
+            type="relation"
+            match_expression="route=bicycle | route=mtb"
+            icon="presets/misc/route.svg">
+
+            <link wiki="Tag:route=bicycle" />
+            
+            <reference ref="type_route" />
+
+            <space />
+            
+            <label
+                text="Comprehensive preset for cycling routes."
+                fr.text="Préréglages complets pour les itinéraires cyclables." />
+
+            <label
+                text="Only suitable to &quot;type=route&quot; and &quot;route=cycling|mtb&quot; relations. Any other value will be overwritten."
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=cycling|mtb&quot;. Toute autre valeur sera écrasée." />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="basic_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="route_details" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="cycling_network" />
+
+            <reference ref="numerical_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_info" />
+        </item>
+
+        <item
+            name="Winter sports"
+            fr.name="Sports d'hiver"
+            type="relation"
+            match_expression="route=piste | route=ski"
+            icon="presets/misc/route.svg">
+
+            <link wiki="Tag:route=piste" />
+            
+            <reference ref="type_route" />
+
+            <space />
+            
+            <label
+                text="Comprehensive preset for winter sports routes."
+                fr.text="Préréglages complets pour les itinéraires de sports d'hiver." />
+
+            <label
+                text="Only suitable to &quot;type=route&quot; and &quot;route=piste|ski&quot; relations. Any other value will be overwritten." 
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=piste|ski&quot;. Toute autre valeur sera écrasée."/>
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="basic_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="piste_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="route_details" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_network" />
+
+            <reference ref="numerical_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_info" />
+        </item>
+
+        <item
+            name="Horse"
+            fr.name="Cheval"
+            type="relation"
+            icon="presets/misc/route.svg">
+
+            <link wiki="Tag:route=horse" />
+            
+            <reference ref="type_route" />
+
+            <key
+                key="route"
+                value="horse" />
+
+            <space />
+
+            <label
+                text="Comprehensive preset for horse routes."
+                fr.text="Préréglages complets pour itinéraires équestres." />
+
+            <label
+                text="Only suitable to &quot;type=route&quot; and &quot;route=horse&quot; relations. Any other value will be overwritten."
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=horse&quot;. Toute autre valeur sera écrasée." />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="basic_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="route_details" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="horse_network" />
+
+            <reference ref="numerical_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_info" />
+        </item>
+
+        <item
+            name="Other practices"
+            fr.name="Autres pratiques"
+            type="relation"
+            match_expression="route=nordic_walking | route=fitness_trail | route=inline_skates | route=transhumance"
+            icon="presets/misc/route.svg">
+
+            <link
+                wiki="Key:route#Non-motorized_land_routes" />
+            
+            <reference ref="type_route" />
+
+            <space />
+            
+            <label
+                text="Comprehensive preset for diverse practice routes."
+                fr.text="Préréglages complets pour itinéraires de pratique diverses." />
+
+            <label
+                text="Only suitable to &quot;type=route&quot; relations. Any other value will be overwritten."
+                fr.text="Convient seulement pour les relations &quot;type=route&quot;. Toute autre valeur sera écrasée."/>
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="basic_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="route_details" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_network" />
+
+            <reference ref="numerical_info" />
+
+            <space />
+            <item_separator />
+            <space />
+
+            <reference ref="other_info" />
+        </item>
+    </group>
+</presets>
