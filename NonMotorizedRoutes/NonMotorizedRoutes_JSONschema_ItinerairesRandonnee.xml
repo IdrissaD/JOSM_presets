@@ -375,6 +375,9 @@
                 text="Only suitable to &quot;type=route&quot; and &quot;route=cycling|mtb&quot; relations. Any other value will be overwritten."
                 fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=cycling|mtb&quot;. Toute autre valeur sera écrasée." />
 
+            <label
+                fr.text="Les champs du schéma utilisés pour remplir chaque clef OSM sont notés entre crochets : [balisage], [nom_itineraire], etc." />
+
             <space />
             <item_separator />
             <space />
@@ -422,6 +425,9 @@
             <label
                 text="Only suitable to &quot;type=route&quot; and &quot;route=piste|ski&quot; relations. Any other value will be overwritten." 
                 fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=piste|ski&quot;. Toute autre valeur sera écrasée."/>
+
+            <label
+                fr.text="Les champs du schéma utilisés pour remplir chaque clef OSM sont notés entre crochets : [balisage], [nom_itineraire], etc." />
 
             <space />
             <item_separator />
@@ -480,6 +486,9 @@
                 text="Only suitable to &quot;type=route&quot; and &quot;route=horse&quot; relations. Any other value will be overwritten."
                 fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=horse&quot;. Toute autre valeur sera écrasée." />
 
+            <label
+                fr.text="Les champs du schéma utilisés pour remplir chaque clef OSM sont notés entre crochets : [balisage], [nom_itineraire], etc." />
+
             <space />
             <item_separator />
             <space />
@@ -528,6 +537,9 @@
             <label
                 text="Only suitable to &quot;type=route&quot; relations. Any other value will be overwritten."
                 fr.text="Convient seulement pour les relations &quot;type=route&quot;. Toute autre valeur sera écrasée."/>
+
+            <label
+                fr.text="Les champs du schéma utilisés pour remplir chaque clef OSM sont notés entre crochets : [balisage], [nom_itineraire], etc." />
 
             <space />
             <item_separator />
