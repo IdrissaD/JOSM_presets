@@ -4,8 +4,8 @@
     author="Idrissa Djepa Creutz"
     website="https://github.com/IdrissaD/"
     version="[[revision]]_[[date]]"
-    description="Comprehensive presets for non-motorized routes with detailed key descriptions (hiking, cycling, winter sports...) / Translated in french"
-    fr.description="Préréglages complets pour itinéraires non-motorisés avec descriptions détaillées des clefs (randonnée, vélo, sports d'hiver...)"
+    description="Comprehensive presets for non-motorized routes with detailed key descriptions, specially adapted for datasets compliant with following JSON Schema: github.com/PnX-SI/schema_randonnee / Translated in french"
+    fr.description="Préréglages complets pour itinéraires non-motorisés avec descriptions détaillées des clefs, spécialement prévu pour l'intégration de données conformes au JSON Schéma itinéraires de randonnée github.com/PnX-SI/schema_randonnee"
     shortdescription="Comprehensive presets for non-motorized routes"
     fr.shortdescription="Préréglages complets pour itinéraires non-motorisés"
     link="https://wiki.openstreetmap.org/wiki/Key:route#Non-motorized_land_routes"
@@ -21,30 +21,25 @@
         <text
         key="operator"
         text="Name of the organization that operates the route"
-        fr.text="Nom de l'organisation responsable de l'itinéraire"
+        fr.text="Nom de l'organisation responsable de l'itinéraire [producteur]"
         wiki="Key:operator" />
 
         <text
             key="website"
             text="Route's website"
-            fr.text="Site web de l'itinéraire" />
+            fr.text="Site web de l'itinéraire [url]" />
     
         <text
             key="name"
             text="Local name of the route"
-            fr.text="Nom de l'itinéraire dans la langue locale" />
-
-        <text
-            key="name:en"
-            text="Name of the route translated in english"
-            fr.text="Nom de l'itinéraire traduit en anglais" />
+            fr.text="Nom de l'itinéraire dans la langue locale [nom_itineraire]" />
     </chunk>
 
     <chunk id="piste_info" >
         <combo
             key="piste:type"
             text="Select the right winter sport here"
-            fr.text="Sélectionnez le bon sport d'hiver ici"
+            fr.text="Sélectionnez le bon sport d'hiver ici [pratique]"
             values_searchable="true"
             values_sort="false">
 
@@ -89,10 +84,6 @@
                 value="skating"
                 display_value="Skating: wide piste for skating (or 'free') style nordic"
                 fr.display_value="Skating : piste large pour pratique du skating" />
-            <list_entry
-                value="mogul"
-                display_value="Mogul: a &quot;piste:type=downhill&quot; groomed for Mogul skiing"
-                fr.display_value="Ski de bosses : une &quot;piste:type=downhill&quot; damée pour du ski de bosses" />
         </combo>
     </chunk>
 
@@ -100,46 +91,39 @@
         <check
             key="roundtrip"
             text="=> Check if the route is a roundtrip (departure and arrival points are identical)."
-            fr.text="=> Cocher si l'itinéraire est une boucle (mêmes points de départ d'arrivée)"
+            fr.text="=> Cocher si l'itinéraire est une boucle, avec les mêmes points de départ d'arrivée [type_itineraire]"
             default="yes" />
 
         <text
             key="from"
             text="Name of the starting point"
-            fr.text="Nom du point de départ" />
+            fr.text="Nom du point de départ [depart]" />
 
         <text
             key="to"
             text="Name of the ending point"
-            fr.text="Nom du point d'arrivée" />
+            fr.text="Nom du point d'arrivée [arrivee]" />
 
         <text
             key="symbol"
             text="Description of the symbols used to follow the route (ex: &quot;Cévennes National Park symbol&quot;)"
-            fr.text="Description des symboles utilisés pour suivre l'itinéraire (ex: &quot;Logo du Parc national des Cévennes&quot;)" />
+            fr.text="Description des symboles utilisés pour suivre l'itinéraire (ex: &quot;Logo du Parc national des Cévennes&quot;) [balisage]" />
 
         <text
             key="osmc:symbol"
             text="Machine readable description of the symbols used to follow the route (ex: &quot;red:red_dot&quot;)"
-            fr.text="Description lisible par machine des symboles utilisés pour suivre l'itinéraire (ex: &quot;red:red_dot&quot;)" />
+            fr.text="Description lisible par machine des symboles utilisés pour suivre l'itinéraire (ex: &quot;red:red_dot&quot;) [balisage]" />
 
         <text
             key="colour"
             text="Official colour associated to the route (CSS color name or hex triplet code)"
-            fr.text="Couleur officielle associée à l'itinéraire (nom de couleur CSS ou code hexadécimal)" />
+            fr.text="Couleur officielle associée à l'itinéraire (nom de couleur CSS ou code hexadécimal) [balisage]" />
 
         <text
             key="ref"
             text="Reference code of the route (ex: &quot;EV5&quot; for &quot;EuroVélo 5&quot;)"
-            fr.text="Code de référence de l'itinéraire (ex : &quot;EV5&quot; pour &quot;Eurovélo 5&quot;)" />
+            fr.text="Code de référence de l'itinéraire (ex : &quot;EV5&quot; pour &quot;Eurovélo 5&quot;) [nom_itineraire]" />
 
-        <label
-            text="Check if the route is signposted and the signs are only visible if you go in one specific direction:"
-            fr.text="Cocher si l'itinéraire est balisé avec des panneaux visible dans seulement une direction :" />
-        <check
-            key="signed_direction"
-            text="   (it doesn't mean that it's forbidden to go in the other direction, but signs won't be visible)"
-            fr.text="   (cela ne signifie pas qu'il est interdit d'aller dans l'autre direction, seulement que les panneaux ne seront pas visibles)" />
             <!-- white spaces in texts intended for form layout -->
 
     </chunk>
@@ -240,29 +224,34 @@
         <text
             key="distance"
             text="Distance covered by the route, in kilometers and with a a point for decimals (ex: &quot;12.5&quot;)"
-            fr.text="Longueur de l'itinéraire, en kilomètres et avec un point pour les décimales" />
+            fr.text="Longueur de l'itinéraire, en kilomètres et avec un point pour les décimales [longueur]" />
 
+        <text
+            key="ele:max"
+            text="Maximum elevation (in meters)"
+            fr.text="Altitude maximale de l'itinéraire (en mètres) [altitude_max]" />
+
+        <text
+            key="ele:min"
+            text="Minimum elevation (in meters)"
+            fr.text="Altitude minimale de l'itinéraire (en mètres) [altitude_min]" />
+        
         <text
             key="ascent"
             text="Total ascent of the route (in meters)"
-            fr.text="Dénivelé positif total (en mètres)" />
+            fr.text="Dénivelé positif total (en mètres) [denivele_positif]" />
 
         <text
             key="descent"
             text="Total descent of the route, only if the route isn't a roundtrip (in meters)"
-            fr.text="Dénivelé négatif total, seulement si l'itinéraire n'est pas une boucle (en mètres)" />
+            fr.text="Dénivelé négatif total, seulement si l'itinéraire n'est pas une boucle (en mètres) [denivele_negatif]" />
     </chunk>
 
     <chunk id="other_info">
         <text
             key="description"
             text="What is special about this route? This is not for guiding instructions. (in local language)"
-            fr.text="Description générale de l'itinéraire. Cette clef n'est pas prévue pour des instructions de direction. (dans la langue locale)" />
-
-        <text
-            key="description:en"
-            text="What is special about this route? This is not for guiding instructions. (in english language)"
-            fr.text="Description générale de l'itinéraire. Cette clef n'est pas prévue pour des instructions de direction. (traduite en anglais)" />
+            fr.text="Description générale de l'itinéraire. Cette clef n'est pas prévue pour des instructions de direction. (dans la langue locale) [presentation_courte]" />
 
         <label
             text="Check if the route has an educational purpose, be it natural, cultural, historical:"
@@ -274,11 +263,6 @@
             disable_off="true" />
             <!-- white spaces in texts intended for form layout -->
         <space />
-
-        <text
-            key="wikipedia"
-            text="Link to the route's Wikipedia page (ex: &quot;fr:Chemin de Stevenson&quot;)"
-            fr.text="Lien vers la page Wikipédia de l'itinéraire (ex : &quot;fr:Chemin de Stevenson&quot;)" />
 
         <combo
             key="state"
@@ -335,6 +319,13 @@
             <label
                 text="Only suitable to &quot;type=route&quot; and &quot;route=hiking|running|foot&quot; relations. Any other value will be overwritten."
                 fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=hiking|running|foot&quot;. Toute autre valeur sera écrasée." />
+
+            <label
+                text="Specially adapted to datasets compliant to JSON Schema &quot;Itinéraires de randonnée&quot; (github.com/PnX-SI/schema_randonnee/)"
+                fr.text="Spécialement adapté aux jeux de données conformes au schéma &quot;Itinéraires de randonnée&quot; (github.com/PnX-SI/schema_randonnee/)" />
+
+            <label
+                fr.text="Les champs du schéma utilisés pour remplir chaque clef OSM sont notés entre crochets : [balisage], [nom_itineraire], etc." />
 
             <space />
             <item_separator />
