@@ -15,4 +15,4 @@ Available through the JOSM presets search engine and at this address: https://jo
 
 ## Preview in JOSM
 
-![Preset's preview](/screenshot_josm.png "Preset's preview")
+![Preset's preview](./screenshot_josm.png "Preset's preview")
