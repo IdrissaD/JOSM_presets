@@ -348,6 +348,45 @@
                 fr.short_description="Majoritairement sans chemin. Excellentes compétences d'orientation" />
         </combo>
 
+        <combo
+            key="trailblazed"
+            text="Trailblazing"
+            fr.text="Balisage du sentier"
+            values_searchable="true"
+            values_sort="false">
+
+            <list_entry
+                value="symbols"
+                display_value="Symbols"
+                fr.display_value="Symboles"
+                short_description="Colorful symbols, be it painted directly on other objects or artificial material labels"
+                fr.short_description="Symboles colorés, comme des marques de peinture ou des plaques en matériaux artificiels" />
+            <list_entry
+                value="cairns"
+                display_value="Cairns"
+                fr.display_value="Cairns"
+                short_description="Piled stones in such manner that there is not doubt they are man made for navigational reason."
+                fr.short_description="Empilements de pierres tels qu'il est certain qu'ils ont une origine humaine et présents pour le balisage" />
+            <list_entry
+                value="poles"
+                display_value="Poles"
+                fr.display_value="Poteaux"
+                short_description="Erected poles. Wooden or plastic, colored or natural"
+                fr.short_description="Poteaux verticaux, en bois, plastique, colorés ou non" />
+            <list_entry
+                value="no"
+                display_value="None"
+                fr.display_value="Aucun"
+                short_description="No trail marking at all"
+                fr.short_description="Aucun balisage" />
+            <list_entry
+                value="yes"
+                display_value="Other kind of trailblazing"
+                fr.display_value="Autre type de balisage"
+                short_description="Any trail marking which will not fit any other definition"
+                fr.short_description="Balisage ne correspondant à aucune des autres définitions" />        
+        </combo>
+
         <space />
         
         <combo

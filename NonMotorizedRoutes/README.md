@@ -29,4 +29,4 @@ I took part to the creation of a JSON Schema on non-motorized routes, available 
 
 ## Preview in JOSM
 
-![Preset's preview](/screenshot_josm.png "Preset's preview")
+![Preset's preview](./screenshot_josm.png "Preset's preview")
