@@ -75,12 +75,17 @@
             text="Grooming type of the route"
             fr.text="Type de damage de l'itinéraire"
             values_searchable="true"
-            values_sort="false">
+            values_sort="false"
+            editable="true">
 
             <list_entry
                 value="classic"
-                display_value="Mechanically groomed"
-                fr.display_value="Damage mécanique" />
+                display_value="Two rails for classic style nordic"
+                fr.display_value="Deux rails pour style classique de ski nordique" />
+            <list_entry
+                value="classic;skating"
+                display_value="Wide piste for skating and at least one set of classic rails"
+                fr.display_value="Large piste pour le skating et au moins une paire de rails classiques" />    
             <list_entry
                 value="backcountry"
                 display_value="Not groomed"
@@ -150,7 +155,8 @@
             text="Importance of the route"
             fr.text="Importance de l'itinéraire"
             values_searchable="true"
-            values_sort="false">
+            values_sort="false"
+            editable="true">
             
             <list_entry
                 value="iwn"
@@ -171,13 +177,27 @@
         </combo>
     </chunk>
 
+    <chunk id="network_type">
+        <label
+            text="Check if the route is part of a node network:"
+            fr.text="Cocher si l'itinéraire fait partie d'un réseau de carrefours :" />
+        <check
+            key="network:type"
+            text="   (a node network is a recreational route network consisting of labeled junctions connected by node-to-node routes)" 
+            fr.text="   (un réseau de carrefours est un réseau d'itinéraires composé de carrefours numérotés connectés par des itinéraires utilisant ces numéros)"
+            value_on="node_network"
+            disable_off="true" />
+            <!-- white spaces in texts intended for form layout -->
+    </chunk>
+
     <chunk id="cycling_network">
         <combo
             key="network"
             text="Importance of the route"
             fr.text="Importance de l'itinéraire"
             values_searchable="true"
-            values_sort="false">
+            values_sort="false"
+            editable="true">
 
             <list_entry
                 value="icn"
@@ -209,7 +229,9 @@
             text="Importance of the route"
             fr.text="Importance de l'itinéraire"
             values_searchable="true"
-            values_sort="false">
+            values_sort="false"
+            editable="true">
+
             <list_entry
                 value="ihn"
                 display_value="International route"
@@ -285,7 +307,8 @@
             text="Current operational state of the route"
             fr.text="État opérationnel actuel de l'itinéraire"
             values_searchable="true"
-            values_sort="false">
+            values_sort="false"
+            editable="true">
 
             <list_entry
                 value="proposed"
@@ -333,12 +356,39 @@
                 fr.text="Préréglages complets pour les itinéraires de randonnée, marche et course à pied." />
 
             <label
-                text="Only suitable to &quot;type=route&quot; and &quot;route=hiking|running|foot&quot; relations. Any other value will be overwritten."
-                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=hiking|running|foot&quot;. Toute autre valeur sera écrasée." />
+                text="Only suitable to &quot;type=route&quot; and &quot;route=hiking [or] running [or] foot&quot; relations. Any other value will be overwritten."
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=hiking [ou] running [ou] foot&quot;. Toute autre valeur sera écrasée." />
 
             <space />
             <item_separator />
             <space />
+
+            <combo
+                key="route"
+                text="Select the right &quot;route&quot; type"
+                fr.text="Sélectionnez le bon type d'itinéraire pédestre"
+                values_searchable="true"
+                values_sort="false">
+
+                <list_entry
+                    value="foot"
+                    display_value="Walking"
+                    fr.display_value="Balade"
+                    shortdescription="route walkable without any limitations regarding fitness, equipment or weather conditions"
+                    fr.shortdescription="marche courte ne demandant pas de niveau physique ou équipement particuliers" />
+                <list_entry
+                    value="hiking"
+                    display_value="Hiking"
+                    fr.display_value="Randonnée"
+                    shortdescription="long, vigorous walk, usually on trails in the countryside"
+                    fr.shortdescription="marche longue et physique, en général sur des sentiers dans la nature" />
+                <list_entry
+                    value="running"
+                    display_value="Running"
+                    fr.display_value="Course à pied"
+                    shortdescription="route planned for running"
+                    fr.shortdescription="itinéraire prévu pour la course à pied" />
+            </combo>
 
             <reference ref="basic_info" />
 
@@ -352,6 +402,7 @@
             <item_separator />
             <space />
 
+            <reference ref="network_type" />
             <reference ref="foot_network" />
 
             <reference ref="numerical_info" />
@@ -381,12 +432,30 @@
                 fr.text="Préréglages complets pour les itinéraires cyclables." />
 
             <label
-                text="Only suitable to &quot;type=route&quot; and &quot;route=cycling|mtb&quot; relations. Any other value will be overwritten."
-                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=cycling|mtb&quot;. Toute autre valeur sera écrasée." />
+                text="Only suitable to &quot;type=route&quot; and &quot;route=cycling [or] mtb&quot; relations. Any other value will be overwritten."
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=cycling [ou] mtb&quot;. Toute autre valeur sera écrasée." />
 
             <space />
             <item_separator />
             <space />
+
+            <combo
+                key="route"
+                text="Select the right &quot;route&quot; type"
+                fr.text="Sélectionnez le bon type d'itinéraire cycliste"
+                values_searchable="true"
+                values_sort="false"
+                editable="true">
+
+                <list_entry
+                    value="bicycle"
+                    display_value="Bicycle"
+                    fr.display_value="Tous vélos" />
+                <list_entry
+                    value="mtb"
+                    display_value="MTB"
+                    fr.display_value="VTT" />
+            </combo>
 
             <reference ref="basic_info" />
 
@@ -400,6 +469,7 @@
             <item_separator />
             <space />
 
+            <reference ref="network_type" />
             <reference ref="cycling_network" />
 
             <reference ref="numerical_info" />
@@ -421,6 +491,9 @@
             <link wiki="Tag:route=piste" />
             
             <reference ref="type_route" />
+            <key
+                key="route"
+                value="piste" />
 
             <space />
             
@@ -429,8 +502,8 @@
                 fr.text="Préréglages complets pour les itinéraires de sports d'hiver." />
 
             <label
-                text="Only suitable to &quot;type=route&quot; and &quot;route=piste|ski&quot; relations. Any other value will be overwritten." 
-                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=piste|ski&quot;. Toute autre valeur sera écrasée."/>
+                text="Only suitable to &quot;type=route&quot; and &quot;route=piste&quot; relations. Any other value will be overwritten." 
+                fr.text="Convient seulement pour les relations &quot;type=route&quot; et &quot;route=piste&quot;. Toute autre valeur sera écrasée."/>
 
             <space />
             <item_separator />
@@ -454,6 +527,7 @@
             <item_separator />
             <space />
 
+            <reference ref="network_type" />
             <reference ref="other_network" />
 
             <reference ref="numerical_info" />
@@ -505,6 +579,7 @@
             <item_separator />
             <space />
 
+            <reference ref="network_type" />
             <reference ref="horse_network" />
 
             <reference ref="numerical_info" />
@@ -542,6 +617,31 @@
             <item_separator />
             <space />
 
+            <combo
+                key="route"
+                text="Select the right &quot;route&quot; type"
+                fr.text="Sélectionnez le bon type d'itinéraire"
+                values_searchable="true"
+                values_sort="false">
+
+                <list_entry
+                    value="nordic_walking"
+                    display_value="Nordic walking"
+                    fr.display_value="Marche nordique" />
+                <list_entry
+                    value="fitness_trail"
+                    display_value="Fitness trail"
+                    fr.display_value="Parcours santé" />
+                <list_entry
+                    value="inline_skates"
+                    display_value="Inline Skates"
+                    fr.display_value="Rollers, patins à roulettes" />
+                <list_entry
+                    value="transhumance"
+                    display_value="Transhumance"
+                    fr.display_value="Transhumance" />
+            </combo>
+
             <reference ref="basic_info" />
 
             <space />
@@ -554,6 +654,7 @@
             <item_separator />
             <space />
 
+            <reference ref="network_type" />
             <reference ref="other_network" />
 
             <reference ref="numerical_info" />
