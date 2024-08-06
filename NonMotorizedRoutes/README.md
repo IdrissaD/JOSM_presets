@@ -20,7 +20,7 @@ Available through the JOSM presets search engine and at this address: https://jo
 
 ## JSON Schema "Itinéraires de randonnée"
 
-I took part to the creation of a JSON Schema on non-motorized routes, available [here](https://github.com/PnX-SI/schema_randonnee). Its goal is to standardize human-powered routes open data dissemination. In order to help people to contribute to OpenStreetMap starting from datasets compliant to this schema, I made a version of the presets that focus on the fields present in the specification: [NonMotoRizedRoutes_JSONschema_ItinerairesRandonnee.xml]
+I took part to the creation of a JSON Schema on non-motorized routes, available [here](https://github.com/PnX-SI/schema_randonnee). Its goal is to standardize human-powered routes open data dissemination. In order to help people to contribute to OpenStreetMap starting from datasets compliant to this schema, I made a version of the presets that focus on the fields present in the specification: [NonMotorizedRoutes_JSONschema_ItinerairesRandonnee.xml](./NonMotorizedRoutes_JSONschema_ItinerairesRandonnee.xml).
 
 ## Presets I took inspiration from
 
